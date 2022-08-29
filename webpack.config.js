@@ -1,11 +1,13 @@
 const path = require('path');
 
+
 module.exports = {
   mode: 'production',
   entry: './cli.js',
   output: {
     path: path.resolve(__dirname, 'dist')
   },
+  target: 'node',
   module: {
     rules: [
       {
@@ -19,6 +21,18 @@ module.exports = {
         }
       }
     ]
+  },
+  resolve: {
+    fallback: {
+        "fs": false,
+        "tty": false,
+        "stream": false,
+        "assert": false,
+        "path": false,
+        "crypto": false,
+        "process": false,
+        "child_process": false
+    },
   }
   
 };

@@ -16,7 +16,7 @@
   "dependencies": {
     "chalk": "^4.0.0",
     "commander": "^9.4.0",
-    "inquirer": "^9.1.0",
+    "inquirer": "^8.2.4",
     "util": "^0.12.4"
   },
   "devDependencies": {
@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.18.10",
     "babel-loader": "^8.2.5",
     "babel-preset-env": "^1.7.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   }
