@@ -1,0 +1,24 @@
+<template>
+  <div class="<%= data.name %>">
+      
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: "<%= data.name %>",
+  props: {
+      msg: String,
+  },
+  created: () => {},
+  mounted: () => {}
+})
+</script>
+
+<style scoped lang="less">
+ .<%= data.name %> {
+
+ }
+</style>
