@@ -4,6 +4,7 @@ const inquirer = require('inquirer')
 const ora = require('ora')
 const ejs = require('ejs')
 const path = require('path')
+const fse = require('fs-extra')
 
 program.command("create <project-name>") // 增加创建指令
 .description("create a new project") // 添加描述信息
@@ -17,17 +18,8 @@ program.command("addCmp <component-name>")
 .description("create a new component")
 .option("-d, --dir", "specifies directory creation")
 .action((name) => {
-  console.log(path.join(__dirname, '/template/vue.ejs'))
-  // ejs.renderFile(path.join(__dirname, '/template/vue.ejs'), { name }, {}, (err, str) => {
-  //   console.log('ejs result', str)
-  // })
-  // let people = ['geddy', 'neil', 'alex']
-  // html = ejs.render('<%= name %>', {name: name});
-  // console.log('html', html)
- const html1 =  ejs.renderFile(path.join(__dirname, '/template/vue.ejs'), { data: { name }})
- console.log(html1)
-  // const t = ejs.render('<=% name %>', { name })
-  // console.log('t', t)
+ const html =  ejs.renderFile(path.join(__dirname, '/template/vue.ejs'), { data: { name }})
+
 })
 program.name('lvluo-cli').usage('<command> [option]').version(`lvluo-cli ${require('./package.json').version}`)
 program.parse(process.argv);
