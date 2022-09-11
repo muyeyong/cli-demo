@@ -1,12 +1,10 @@
-# 尝试写一个cli
-## 打包方面的配置也搞下
-## 配置ts 全局文件引入 @/xxx/xxx
-## pnpm也学会试用下
+Vue 脚手架
+简介
+基于 Vue Cli 生成，基本架构是 Vue3.0 + TS + Eslint(airbnb)，保存代码会自动格式化
 
-commander 就是提供帮助命令的吗？
-项目里面同时用 require 和 import引入，混合使用 or 强制使用某种引入
+UI组件使用的antd，支持按需引用
 
-npm unlink lvluo-cli 不生效 ===> npm r lvluo-cli -g       
-     
+特色
+支持微前端(qiankun)
 
-
+提交代码自动检查代码是否规范
