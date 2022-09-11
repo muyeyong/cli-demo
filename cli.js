@@ -3,7 +3,8 @@ const program = require('commander')
 const inquirer = require('inquirer')
 const ora = require('ora')
 const createProject = require('./lib/create')
-const { addCmp } = require('./lib/action')
+const { addCmp, diyTemplateUrl, addView } = require('./lib/action')
+
 
 program.command("create <project-name>") 
 .description("create a new project") 
@@ -15,9 +16,15 @@ program.command("addCmp <component-name>")
 .option("-d, --dir", "specifies directory creation")
 .action(addCmp)
 
-program.command("setVueTemUrl <url>")
-.description("set vue template url,for example https://github.com/muyeyong/myVueCLI.git#main")
-.action()
+
+program.command("addView <component-name>")
+.description("create a new view")
+.option("-d, --dir", "specifies directory creation")
+.action(addView)
+
+program.command("setTemUrl <template> <url>")
+.description("set template url,for example: vue https://github.com/muyeyong/myVueCLI.git#main")
+.action(diyTemplateUrl)
 
 
 

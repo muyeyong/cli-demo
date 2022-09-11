@@ -34,7 +34,7 @@ const setTemplateUrl = (template,  url) => {
   template = template.toLocaleLowerCase()
 
   if (!isUrl(url)) {
-    return { success: false, message: `${url} 不合法`}
+    return { success: false, message: `URL: ${url} 不合法`}
   }
 
   const configObj = fse.readJSONSync(path.join(__dirname, '../lib/config.json'))
@@ -44,14 +44,14 @@ const setTemplateUrl = (template,  url) => {
   }
  
   switch(template) {
-    case 'Vue': 
+    case 'vue': 
       configObj['VUE_GIT_TEMPLATE_URL'] = url
       break
-    case 'React': 
-      configObj['React_GIT_TEMPLATE_URL'] = url
+    case 'react': 
+      configObj['REACT_GIT_TEMPLATE_URL'] = url
       break
   }
-  fse.writeJSONSync(path.join(__filename, './lib/config.json'), configObj)
+  fse.writeJSONSync(path.join(__dirname, '../lib/config.json'), configObj)
   return { success: true, message: `${template}模板url设置成功`}
 }
 

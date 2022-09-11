@@ -15,9 +15,9 @@ const writeFile = (filePath, content) => {
   获取对应的文件模板 vue react
   配置里面去获取项目类型
  */
-const ejsCompile = (name) => {
+const ejsCompile = (name, type) => {
   return new Promise((resolve, reject) => {
-    ejs.renderFile(path.join(__dirname, '../template/vue.ejs'), { data: { name }}).then( html => {
+    ejs.renderFile(path.join(__dirname, `../template/${type}.ejs`), { data: { name }}).then( html => {
       resolve(html)
     }).catch(err => {
       reject(err)

@@ -1,0 +1,12 @@
+import { RouteRecordRaw } from 'vue-router'
+
+const <%= data.name %> = () => import('./<%= data.name %>.vue')
+const router: RouteRecordRaw =  {
+  path: '/<%= data.name %>',
+  name: '<%= data.name %>',
+  component: <%= data.name %>,
+  children: [
+  ]
+}
+
+export default router
