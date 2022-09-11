@@ -4,12 +4,10 @@
   "description": "",
   "main": "cli.js",
   "bin": {
-    "lvluo-cli": "./cli.js"
+    "lvluo": "./cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "babel": "babel cli.js -d dist"
   },
   "author": "",
   "license": "ISC",
