@@ -14,6 +14,8 @@ UI组件使用的antd，支持按需引用
 
 提交代码自动检查代码是否规范
 
+自定义模板地址
+
 ## 使用
 
 ```js
@@ -28,5 +30,7 @@ npm install lvluo -g
 
 创建视图: `lvluo addView viewName`
 
-创建store：`lvluo createStore storeName`
+创建store：`lvluo addStore storeName`
+
+设置模板地址: `lvluo setTempUrl templateType url`，例如设置vue模板的地址，`lvluo setTemp vue https://xxx.xxx`，注意模板项目的目录结构需要跟现有保持一致。
 

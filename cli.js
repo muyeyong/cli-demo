@@ -26,7 +26,7 @@ program.command("setTemUrl <template> <url>")
 .description("set template url,for example: vue https://github.com/muyeyong/myVueCLI.git#main")
 .action(diyTemplateUrl)
 
-program.command("createStore <name>")
+program.command("addStore <name>")
 .description("create a new store")
 .action(createStore)
 
