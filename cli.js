@@ -3,7 +3,7 @@ const program = require('commander')
 const inquirer = require('inquirer')
 const ora = require('ora')
 const createProject = require('./lib/create')
-const { addCmp, diyTemplateUrl, addView } = require('./lib/action')
+const { addCmp, diyTemplateUrl, addView, createStore } = require('./lib/action')
 
 
 program.command("create <project-name>") 
@@ -26,7 +26,9 @@ program.command("setTemUrl <template> <url>")
 .description("set template url,for example: vue https://github.com/muyeyong/myVueCLI.git#main")
 .action(diyTemplateUrl)
 
+program.command("createStore <name>")
+.description("create a new store")
+.action(createStore)
 
-
-program.name('lvluo-cli').usage('<command> [option]').version(`lvluo-cli ${require('./package.json').version}`)
+program.name('lvluo').usage('<command> [option]').version(`lvluo ${require('./package.json').version}`)
 program.parse(process.argv);
