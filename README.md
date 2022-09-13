@@ -22,6 +22,8 @@ npm install lvluo -g
 
 使用帮助：`lvluo -h`
 
+创建项目： `lvluo create projectName`
+
 创建组件：` lvluo addCmp componentName`
 
 创建视图: `lvluo addView viewName`
